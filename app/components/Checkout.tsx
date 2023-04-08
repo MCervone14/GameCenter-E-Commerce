@@ -37,7 +37,7 @@ const Checkout = () => {
         setClientSecret(data.paymentIntent.client_secret);
         cartStore.setPaymentIntent(data.paymentIntent.id);
       });
-  }, [cartStore.paymentIntent]);
+  }, []);
 
   const options: StripeElementsOptions = {
     clientSecret,
