@@ -18,11 +18,16 @@ const Product = async ({ searchParams }: SearchParamType) => {
         <h2 className="text-3xl py-2 font-bold">{searchParams.name}</h2>
         <p className="py-2">{searchParams.description}</p>
         <h2 className="text-xl py-2">Categories</h2>
-        {categories.map((category, index) => (
-          <p className="btn bg-primary py-2 px-2 mr-2 mb-5" key={index}>
-            {category}
-          </p>
-        ))}
+        <div className="flex flex-row">
+          {categories.map((category, index) => (
+            <p
+              key={index}
+              className="bg-primary rounded-sm px-1 text-sm  mr-2 mb-5 text-black"
+            >
+              {category}
+            </p>
+          ))}
+        </div>
         <div className="flex gap-2">
           <p className="font-bold">
             {searchParams.unit_amount !== null
